@@ -1,0 +1,65 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h1{
+    margin: 0;
+}
+.game-wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+}
+.game{
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+}
+.game__cell{
+    border:1px solid #000;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    cursor: pointer;
+    transition:all .5s;
+}
+.game__cell:hover{
+    background-color: #7cc6ff;
+}
+.game__result{
+    display: flex;
+    font-size: 36px;
+    margin: 30px;
+}
+.game__result span{
+    margin:0 20px;
+}
+.cross{
+    color:#22ae15;
+}
+.zero{
+    color:#ff0000;
+}
+
+.win{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(0,0,0,.2);
+}
+.win.active{
+    display:block;
+}
